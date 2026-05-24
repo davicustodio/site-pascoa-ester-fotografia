@@ -492,8 +492,21 @@
     }
 
     .info-section { background: var(--color-warm-white); }
+    .info-wrap {
+      max-width: 1060px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr; gap: 1.5rem;
+      align-items: start;
+    }
+    .info-photo {
+      border-radius: 24px; overflow: hidden;
+      box-shadow: 0 20px 50px rgba(59,48,39,.12);
+      background: var(--color-linen);
+    }
+    .info-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover; aspect-ratio: 16/10;
+    }
     .info-grid {
-      max-width: 980px; margin: 0 auto;
       display: grid; grid-template-columns: 1fr; gap: 1rem;
     }
     .info-card {
@@ -534,7 +547,7 @@
     .cta-final {
       background:
         linear-gradient(135deg, rgba(59,48,39,.86), rgba(70,84,59,.8)),
-        url('assets/gestante-05.jpg') center/cover no-repeat;
+        url('assets/gestante-externa.png') center/cover no-repeat;
       text-align: center;
       padding: 4.5rem 1.5rem;
     }
@@ -616,7 +629,9 @@
       .pricing-grid { grid-template-columns: repeat(2, 1fr); }
       .special-grid { grid-template-columns: 1fr 1fr; }
       .figurinos-grid { grid-template-columns: repeat(3, 1fr); }
-      .info-grid { grid-template-columns: 1fr 1fr; }
+      .info-wrap { grid-template-columns: 1.05fr 1fr; }
+      .info-photo img { aspect-ratio: 4/5; min-height: 100%; }
+      .info-grid { grid-template-columns: 1fr; }
       .connection-wrap { grid-template-columns: 1fr 1.05fr; }
       .connection-photo { order: -1; }
     }
@@ -689,7 +704,7 @@
         <p>No estúdio, trabalhamos com dois estilos de ensaio: o <strong>minimalista</strong>, com uma proposta mais clean e sofisticada, e também fotos em <strong>fundo liso clássico</strong>. Assim, você pode escolher o estilo que mais combina com você — ou até unir os dois no mesmo ensaio.</p>
       </div>
       <div class="connection-photo reveal">
-        <img src="assets/gestante-02.jpg" alt="Ensaio gestante fine art no estúdio Ester Angelini" loading="lazy">
+        <img src="assets/gestante-foto-03.jpg" alt="Ensaio gestante fine art com buquê de flores" loading="lazy">
       </div>
     </div>
   </section>
@@ -700,13 +715,13 @@
     <p class="section-desc reveal">No estúdio tem opções de looks e você pode mesclar com suas próprias peças. Também receberá um PDF com orientações específicas sobre cores e look ideal.</p>
     <div class="gallery-grid">
       <div class="gallery-item reveal">
-        <img src="assets/gestante-03.jpg" alt="Look minimalista para ensaio gestante" loading="lazy">
+        <img src="assets/gestante-foto-01.jpg" alt="Ensaio gestante em casal — estúdio fine art" loading="lazy">
       </div>
       <div class="gallery-item reveal">
-        <img src="assets/gestante-04.jpg" alt="Ensaio gestante com fundo liso clássico" loading="lazy">
+        <img src="assets/gestante-foto-02.jpg" alt="Ensaio gestante minimalista em renda preta" loading="lazy">
       </div>
       <div class="gallery-item reveal">
-        <img src="assets/gestante-05.jpg" alt="Ensaio gestante com casal no estúdio" loading="lazy">
+        <img src="assets/gestante-foto-03.jpg" alt="Ensaio gestante delicado com flores" loading="lazy">
       </div>
     </div>
     <div class="gallery-video reveal">
@@ -745,7 +760,7 @@
       <div class="pricing-card reveal">
         <div class="pricing-icon">🤍</div>
         <div class="pricing-photo">
-          <img src="assets/gestante-03.jpg" alt="Pacote Amada I">
+          <img src="assets/gestante-foto-01.jpg" alt="Pacote Amada I">
         </div>
         <h3>Amada I</h3>
         <p class="pricing-sub">Perfeito para quem quer registrar esse momento com leveza e significado.</p>
@@ -765,7 +780,7 @@
       <div class="pricing-card reveal">
         <div class="pricing-icon">🌿</div>
         <div class="pricing-photo">
-          <img src="assets/gestante-04.jpg" alt="Pacote Amada II">
+          <img src="assets/gestante-foto-02.jpg" alt="Pacote Amada II">
         </div>
         <h3>Amada II</h3>
         <p class="pricing-sub">Mais fotos e mais looks para registrar cada detalhe dessa fase.</p>
@@ -786,7 +801,7 @@
         <span class="pricing-badge">Completo</span>
         <div class="pricing-icon">✨</div>
         <div class="pricing-photo">
-          <img src="assets/gestante-05.jpg" alt="Pacote Amada III">
+          <img src="assets/gestante-foto-03.jpg" alt="Pacote Amada III">
         </div>
         <h3>Amada III</h3>
         <p class="pricing-sub">A forma mais completa de guardar esse momento tão especial.</p>
@@ -855,7 +870,11 @@
     <p class="section-label reveal">Informações</p>
     <h2 class="section-title reveal">Tudo pensado para uma<br>experiência <em>tranquila</em></h2>
     <p class="info-highlight reveal">*Será entregue somente o número de fotos contratadas</p>
-    <div class="info-grid">
+    <div class="info-wrap">
+      <div class="info-photo reveal">
+        <img src="assets/gestante-externa.png" alt="Ensaio gestante externo em Campinas — casal, família e pets" loading="lazy">
+      </div>
+      <div class="info-grid">
       <div class="info-card reveal">
         <h3>Estúdio</h3>
         <p>Os valores são válidos para ensaios realizados em nosso estúdio, localizado em <strong>Campinas/SP</strong>, em um ambiente preparado especialmente para receber sua família com conforto e tranquilidade.</p>
@@ -870,6 +889,7 @@
           <li>Para ensaios na residência do cliente, consulte disponibilidade.</li>
           <li>Valores para Campinas — cidades da região: consultar valor de deslocamento.</li>
         </ul>
+      </div>
       </div>
     </div>
   </section>
